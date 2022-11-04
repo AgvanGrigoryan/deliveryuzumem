@@ -26,13 +26,17 @@ body{
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  .margin-auto{
+    margin: auto;
+    max-width: 90%;
+  }
   .container{
     max-width: 90%;
     margin: auto;
   }
   .main_block{
     position: relative;
-    top: 150px;
+    top: 120px;
   }
   a{
     text-decoration: none;

@@ -4,7 +4,7 @@
             <router-link to="/"><img src="../Img/logo/logo.png" alt=""></router-link>
             <div class="actions">
                 <div class="search_button action-item"><i class="material-icons">search</i></div>
-                <div class="auth_button action-item"><i class="material-icons">person_outline</i></div>
+                <div @click="isOpen=!isOpen" class="auth_button action-item"><i class="material-icons">person_outline</i></div>
                 <div class="card_button action-item">
                     <span class="card_count">0</span>
                     <i class="material-icons-outlined">shopping_cart</i>
@@ -13,9 +13,17 @@
             </div>
         </nav>
     </div>
+    <Modal  @close="isOpen=false" :isOpen="isOpen"  />
 </template>
 <script>
+import Modal from '@/components/Modal.vue'
 export default {
+    components:{Modal},
+    data(){
+        return{
+            isOpen:false
+        }
+    }
 }
 </script>
 <style lang="scss">
@@ -24,7 +32,7 @@ export default {
     width: 100%;
     background-color: white;
     top: 0;
-    z-index: 99;
+    z-index: 100;
     nav{
         display: flex;
         max-width: 90%;

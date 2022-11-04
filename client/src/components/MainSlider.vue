@@ -4,12 +4,15 @@
       :modules="modules"
       :loop="true"
       :autoplay="{
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false,
       }"
       class="mainSlider">
-      <swiper-slide>
-        <img src="" alt="">
+      <swiper-slide class="a">
+      </swiper-slide>
+      <swiper-slide class="b">
+      </swiper-slide>
+      <swiper-slide class="c">
       </swiper-slide>
     </swiper>
   </template>

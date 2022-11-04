@@ -10,6 +10,11 @@ export default {
           const user = await res
           commit('setUser', user)
       },
+      async resgister({commit},formReg){
+        const res = await axios.post('auth/user',formReg).then(
+          
+        )
+      }
   },
   mutations: {
     setUser (state, user) {
